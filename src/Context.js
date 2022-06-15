@@ -30,7 +30,7 @@ const AppProvider = ({ children }) => {
       ) {
         value = '';
         form.placeholder = "Obviously it's not a valid word, try one more time";
-      } else if (value.split(`${value[1]}`)[1] === '') {
+      } else if (value.split(`${value[4]}`)[0] === '') {
         value = '';
         form.placeholder = 'Invalid input: is you kb button jammed?';
       } else {
