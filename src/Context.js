@@ -29,8 +29,12 @@ const AppProvider = ({ children }) => {
         !/a|e|u|i|o|A|E|U|I|O|а|о|и|у|я|ю|ы|э|е|А|О|И|У|Я|Ю|Ы|Э|Е/.test(value)
       ) {
         value = '';
-        form.placeholder = "Obviously it's not a valid word, try one more time";
-      } else if (value.split(`${value[4]}`)[0] === '') {
+        form.placeholder =
+          "Apparently it's not a valid word, try one more time";
+      } else if (
+        value[0] === value[Math.floor(value.length - 1 / 2)] &&
+        value[0] === value[value.length - 1]
+      ) {
         value = '';
         form.placeholder = 'Invalid input: is you kb button jammed?';
       } else {
