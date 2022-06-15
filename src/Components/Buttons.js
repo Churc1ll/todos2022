@@ -65,7 +65,7 @@ const Wrapper = styled.section`
   }
   @media screen and (max-width: 740px) {
     .buttons {
-      margin-right: 10px;
+      margin-right: 8px;
     }
   }
 `;
