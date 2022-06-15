@@ -5,6 +5,7 @@ Features:
 - min\max length of input protection;
 - max 20 todos;
 - some supporting animaiton;
+- adaptive for mobile devices
 
 Tech stack:
 
