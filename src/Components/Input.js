@@ -11,7 +11,7 @@ const Input = () => {
         className='input-task'
         type='text'
         placeholder='What needs to be done?'
-        onKeyPress={handleEnterPress}
+        onKeyPress={(e) => handleEnterPress(e)}
       />
       <button className='input-task__submit' onClick={writeValue}>
         add

@@ -11,25 +11,44 @@ const List = () => {
         !completed &&
         tasks.map((item, index) => {
           const isCompleted = item.isCompleted;
-          return <Task item={item} isCompleted={isCompleted} index={index} />;
+          return (
+            <Task
+              key={index}
+              item={item}
+              isCompleted={isCompleted}
+              index={index}
+            />
+          );
         })}
 
       {active &&
         tasks.map((item, index) => {
           const isCompleted = item.isCompleted;
-          if (!isCompleted) {
-            return <Task item={item} isCompleted={isCompleted} index={index} />;
-          }
-          return true;
+          return (
+            !isCompleted && (
+              <Task
+                key={index}
+                item={item}
+                isCompleted={isCompleted}
+                index={index}
+              />
+            )
+          );
         })}
 
       {completed &&
         tasks.map((item, index) => {
           const isCompleted = item.isCompleted;
-          if (isCompleted) {
-            return <Task item={item} isCompleted={isCompleted} index={index} />;
-          }
-          return true;
+          return (
+            isCompleted && (
+              <Task
+                key={index}
+                item={item}
+                isCompleted={isCompleted}
+                index={index}
+              />
+            )
+          );
         })}
     </section>
   );

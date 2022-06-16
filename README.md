@@ -6,6 +6,7 @@ Features:
 - max 20 todos;
 - some supporting animaiton;
 - adaptive for mobile devices
+- write 'npm test' for tests
 
 Tech stack:
 
