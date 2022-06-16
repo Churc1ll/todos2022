@@ -6,14 +6,14 @@ const Task = ({ item, index, isCompleted }) => {
   return (
     <div className='items-container'>
       <input
-        className={isCompleted && `completed`}
+        className={!!isCompleted && `completed`}
         type='radio'
         name={index}
         onClick={(e) => {
           handleCheck(e);
         }}
       />
-      <p className={isCompleted ? `task-name checked` : `task-name`}>
+      <p className={`${!!isCompleted}` ? 'task-name checked' : 'task-name'}>
         {item.name}
       </p>
       {isCompleted && (

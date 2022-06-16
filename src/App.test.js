@@ -113,7 +113,7 @@ describe('List', () => {
     userEvent.type(screen.getByRole('textbox'), 'test task1{enter}');
     userEvent.type(screen.getByRole('textbox'), 'test task2{enter}');
 
-    const newTask = screen.getByText(/test task2/).previousSibling;
+    const newTask = screen.getAllByRole('radio')[4];
 
     // check 2nd task
     userEvent.click(newTask);
