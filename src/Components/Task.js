@@ -13,7 +13,7 @@ const Task = ({ item, index, isCompleted }) => {
           handleCheck(e);
         }}
       />
-      <p className={`${isCompleted}` ? 'task-name checked' : 'task-name'}>
+      <p className={isCompleted ? 'task-name checked' : 'task-name'}>
         {item.name}
       </p>
       {isCompleted && (
